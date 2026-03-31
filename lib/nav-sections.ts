@@ -1,5 +1,5 @@
 export const SECTION_NAV = [
-  { id: "hero", label: "Home", href: "#hero" },
+  { id: "home", label: "Home", href: "#home" },
   { id: "about", label: "About", href: "#about" },
   { id: "stack", label: "Stack", href: "#stack" },
   { id: "experience", label: "Experience", href: "#experience" },

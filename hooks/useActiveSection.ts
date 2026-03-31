@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 
 const DEFAULT_ORDER = [
-  "hero",
+  "home",
   "about",
   "stack",
   "experience",

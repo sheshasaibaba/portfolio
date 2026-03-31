@@ -4,22 +4,24 @@
 
 export const personalInfo = {
   name: "Sheshasaibaba Gujjari",
-  title: "Senior Full Stack Engineer & AI Specialist",
+  title: "Senior Full Stack Software Engineer",
+  location: "Canada (Remote-ready)",
+  phone: "306-880-5568",
   email: "sheshasaibabagujjari@gmail.com",
   github: "https://github.com/sheshasaibaba",
   linkedin: "https://www.linkedin.com/in/sheshasaibaba-gujjari-05716b2a5/",
   resumeUrl: "/resume.pdf",
-  bio: "Senior Full Stack Engineer with 7 years of experience at the intersection of enterprise-grade stability and AI automation — from Java/Spring ecosystems to TypeScript frontends and RAG pipelines.",
+  bio: "Senior Software Engineer with 7 years of experience bridging enterprise stability and modern AI automation. Specialized in transforming manual, data-intensive bottlenecks into scalable, cloud-native architectures through custom RAG pipelines and CI/CD automation.",
 } as const;
 
 /** Rich About section (hero uses `bio`; this is the full narrative). */
 export const aboutContent = {
   lead:
-    "I am a Senior Full Stack Engineer with 7 years of experience situated at the intersection of enterprise-grade stability and cutting-edge AI automation. My career has been defined by a transition from building high-concurrency Java/Spring Boot ecosystems to architecting modern, high-performance TypeScript frontends and RAG-integrated AI pipelines.",
+    "Senior Software Engineer with 7 years of experience bridging enterprise stability and modern AI automation. Specialized in transforming manual, data-intensive bottlenecks into scalable, cloud-native architectures through custom RAG pipelines and CI/CD automation.",
   pillars: [
     {
       title: "Efficiency architect",
-      body: "I specialize in finding data-intensive bottlenecks and reducing operational overhead — historically by as much as 70% — through custom automation tools and cloud-native architectures.",
+      body: "I specialize in finding data-intensive bottlenecks and reducing operational overhead, historically by as much as 70%, through custom automation tools and cloud-native architectures.",
     },
     {
       title: "Full-spectrum engineering",
@@ -27,7 +29,7 @@ export const aboutContent = {
     },
     {
       title: "AI integration",
-      body: "I don’t just call APIs — I build data processing pipelines. Hands-on with training NLP workflows, manually structuring vector datasets for RAG, and deploying local LLMs for unstructured data problems.",
+      body: "I don’t just call APIs, I build data processing pipelines. Hands-on with training NLP workflows, manually structuring vector datasets for RAG, and deploying local LLMs for unstructured data problems.",
     },
   ],
 } as const;
@@ -119,7 +121,7 @@ export const projectsSource = [
     id: "taxbynav",
     title: "TaxByNav",
     technicalHighlight:
-      "Zero-cost architecture — Cloud Run + Cloudflare, tuned for a true $0 ops footprint (cost optimization at the core).",
+      "Zero-cost architecture, Cloud Run + Cloudflare, tuned for a true $0 ops footprint (cost optimization at the core).",
     description:
       "Live production SaaS for tax filing and appointments: zero recurring infra spend while staying secure and scalable.",
     tags: ["FastAPI", "Next.js 16", "PostgreSQL", "Google SSO", "Cloud Run"],
@@ -127,7 +129,7 @@ export const projectsSource = [
     github: "https://github.com/sheshasaibaba/taxbynav",
     image: "/projects/taxbynav.svg",
     details:
-      "JWT + refresh, Google SSO, async appointment engine, Gmail SMTP — real clients, ~$0/mo server overhead.",
+      "JWT + refresh, Google SSO, async appointment engine, Gmail SMTP, real clients, ~$0/mo server overhead.",
     narrative: {
       problem:
         "A tax filing client needed a robust, secure platform with appointment booking under a strict zero recurring monthly infrastructure budget.",
@@ -146,9 +148,9 @@ export const projectsSource = [
     id: "sgi-chatbot",
     title: "SGI Handbook RAG Chatbot",
     technicalHighlight:
-      "Hybrid retrieval — dense + sparse vectors; math-aware grounding, not just API glue.",
+      "Hybrid retrieval with dense + sparse vectors, math-aware grounding, not just API glue.",
     description:
-      "High-precision QA over the SGI Driver’s Handbook — hybrid retrieval to cut hallucinations and retrieval latency.",
+      "High-precision QA over the SGI Driver’s Handbook, using hybrid retrieval to cut hallucinations and retrieval latency.",
     tags: ["Python", "LangChain", "FAISS", "Llama-3.1", "FastAPI", "RRF"],
     link: "https://github.com/sheshasaibaba/sgi-rag-chatbot",
     github: "https://github.com/sheshasaibaba/sgi-rag-chatbot",
@@ -162,7 +164,7 @@ export const projectsSource = [
       technicalDeepDive: [
         "Manually curated and indexed the handbook PDF into structured text for better vector search.",
         "Retrieval: FAISS dense search + TF-IDF sparse search combined with Reciprocal Rank Fusion (RRF).",
-        "Re-ranking: Cross-Encoder on top-k chunks — cutting manual lookup time by about 60%.",
+        "Re-ranking: Cross-Encoder on top-k chunks, cutting manual lookup time by about 60%.",
         "Stack: Python, LangChain, Llama-3.1, FastAPI.",
       ],
     },
@@ -170,7 +172,7 @@ export const projectsSource = [
   {
     id: "blockveritas",
     title: "BlockVeritas",
-    technicalHighlight: "Hybrid on-chain + IPFS — ~95% lower storage cost vs naive all-on-chain metadata.",
+    technicalHighlight: "Hybrid on-chain + IPFS, ~95% lower storage cost vs naive all-on-chain metadata.",
     description:
       "Community-driven news verification dApp: Proof-of-Reputation voting and Sybil-resistant jury mechanics.",
     tags: ["Solidity", "Ethereum", "IPFS", "Pinata"],
@@ -183,7 +185,7 @@ export const projectsSource = [
       mission: "Combat centralized media bias with a transparent, community-driven verification platform.",
       technicalDeepDive: [
         "Proof-of-Reputation (PoR): users vote on content veracity with reputation-weighted outcomes.",
-        "~95% storage cost reduction: hybrid model — metadata on IPFS via Pinata, cryptographic hashes on Ethereum.",
+        "~95% storage cost reduction: hybrid model with metadata on IPFS via Pinata and cryptographic hashes on Ethereum.",
         "Weighted jury mechanism in Solidity to mitigate Sybil-style attacks.",
       ],
     },
@@ -195,92 +197,86 @@ export const experienceSource = [
     id: "exp-clode",
     timelineLabel: "2025–26",
     role: "Frontend Developer",
-    company: "Clode (UK / Remote)",
+    company: "Clode",
     companyShort: "Clode",
-    period: "Nov 2025 – March 2026",
+    period: "Nov 2025 – Mar 2026",
     tenureLabel: "~5 months",
     description:
-      "Modernized a legacy React monolith into Vite micro-frontends; cut API overhead with TanStack Query and virtualization.",
-    details:
-      "Led UI architecture, performance, and strict TypeScript discipline for production reliability.",
+      "Built optimized front-end interfaces for AI agents focused on high performance and minimal API overhead.",
     color: "#A855F7",
     highlights: [
-      "Spearheaded migration from a legacy React monolith to a Vite-based micro-frontend architecture.",
-      "Zustand + TanStack Query + virtualization: **~40%** less API chatter; UI comfortably supports **10k+** concurrent users.",
-      "Centralized UI library with strict TypeScript — fewer production state regressions (**~85%** reduction in reported issues).",
+      "Requested and implemented Socket integration to replace API polling for real-time agent feedback.",
+      "Architected complex Canvas logic in React Flow using Dagre layouts for service visualization.",
+      "Delivered complex form-building solutions with TanStack optimizations and virtualization for performance.",
+      "Managed application state using Zustand stores and maintained best practices to minimize Git conflicts.",
+      "Suggested architectural improvements for Go and OpenClaw backends to enhance AI agent interaction.",
     ],
   },
   {
     id: "exp-ktech-nlp",
-    timelineLabel: "2025",
-    role: "AI & NLP Engineer (Internal Pivot)",
-    company: "Ktech Products (USA / Remote)",
+    timelineLabel: "2021–25",
+    role: "Machine Learning Engineer",
+    company: "Ktech Products",
     companyShort: "Ktech",
-    period: "May 2025 – Sept 2025",
-    tenureLabel: "~5 months",
+    period: "May 2021 – Sep 2025",
+    tenureLabel: "4 years",
     description:
-      "Internal pivot to production-grade AI: local LLMs, RAG with FAISS, and OCR-to-structure pipelines for legacy documents.",
-    details:
-      "Focused on unstructured data extraction, model training, and sub-second retrieval for internal document search.",
+      "Completed 40 full production pipelines to extract and parse scores from transcripts across various templates.",
     color: "#C026D3",
-    cardVariant: "nlp" as const,
     highlights: [
-      "**AI & RAG pipeline:** Architected a local LLM pipeline using Ollama and a RAG system using FAISS that automated data extraction for **70%** of legacy physical documents, reducing manual information retrieval time by **60%**.",
-      "**NLP model training:** Manually labeled custom datasets and trained models to identify and extract entities from raw OCR text, feeding them into structured **SQL-ready** formats.",
-      "**Automated processing:** Designed the end-to-end pipeline to handle unstructured data at scale, significantly lowering the barrier for data entry and processing.",
+      "Developed custom logic using PyOCR and PaddleOCR to handle hard-to-read PDFs and dual-column page splits.",
+      "Managed a one-man team for manual data engineering and NLP training across multiple high-priority projects.",
+      "Implemented data cleaning using custom prompts via Ollama models to remove document noise.",
+      "Established a cross-verification cycle using secondary LLM models to validate extracted data accuracy.",
+      "Serialized complex transcript data into structured JSON objects for storage in SQL databases.",
     ],
   },
   {
     id: "exp-ktech-sbctc",
     timelineLabel: "2021–25",
-    role: "Senior Full Stack Developer (SBCTC Project)",
-    company: "Ktech Products (USA / Remote)",
+    role: "Software Engineer (Full Stack)",
+    company: "Ktech Products",
     companyShort: "Ktech",
-    period: "June 2021 – May 2025",
+    period: "May 2021 – Sep 2025",
     tenureLabel: "4 years",
-    clientSubtitle: "Client: Washington State Board (SBCTC)",
     description:
-      "Core engineer for SBCTC: SSO at scale, Mongo query tooling, RBAC on **500k+** records, AWS/Azure pipelines, and React Native parity.",
-    details:
-      "Enterprise delivery for Washington State higher-ed applications — accessibility, security, and stakeholder dashboards.",
+      "Managed two full MEAN stack projects and supported additional MERN/React Native projects with SQL backends.",
     color: "#3B82F6",
     stackBadges: [
       "Angular",
       "Node.js",
       "MongoDB",
       "React Native",
-      "Okta",
-      "Azure",
-      "Highcharts",
+      "OKTA/OIDC",
+      "JWT",
+      "Swagger",
       "WCAG",
+      "Zoho",
     ],
-    highlightsPreviewCount: 4,
     highlights: [
-      "**Educational ecosystem (SBCTC):** Core engineer for the Washington State Board (SBCTC), integrating **15** new colleges and increasing application success rates by **30%** through WCAG 2.1 compliant UI engineering and OKTA/OIDC SSO security.",
-      "**Query automation:** Designed and developed a custom MongoDB Query Builder in Angular, eliminating **90%** of manual reporting overhead by allowing non-technical clients to fetch filtered data independently.",
-      "**System optimization:** Refactored Role-Based Access Control (RBAC) and dynamic filtering logic for an administrative portal handling **500k+** records, optimizing query latency by **40%** on a high-concurrency SQL backend.",
-      "**DevOps & CI/CD:** Engineered automated pipelines in **AWS** and provisioned **Azure** pre-production environments, reducing manual deployment cycles and ensuring strict environment consistency.",
-      "**Mobile parity:** Built a **React Native** replica of the core web ecosystem to provide a seamless cross-platform experience for students and faculty.",
-      "**Data visualization:** Built dynamic dashboards using **Highcharts** to track real-time application metrics for state-level stakeholders.",
+      "Trained and mentored 6 new hires on technical workflows, coding standards, and internal professional practices.",
+      "Design and build security features including manual JWT creation, OKTA integration, and Swagger documentation.",
+      "Designed and developed a custom MongoDB Query Builder using Angular and Node.js to enable client-side data fetching.",
+      "Resolved critical production issues and server crashes through proactive log monitoring and bug fixes.",
+      "Led task management and sprint planning in Zoho, assigning user stories and conducting peer reviews.",
+      "Engineered end-to-end features including WCAG compliance from UI design to deployment.",
     ],
   },
   {
     id: "exp-vara",
     timelineLabel: "2019–21",
     role: "Java Developer",
-    company: "Vara Technologies (India / Remote)",
+    company: "Vara Technologies",
     companyShort: "Vara",
-    period: "February 2019 – March 2021",
+    period: "Feb 2019 – Mar 2021",
     tenureLabel: "~2 years",
     description:
-      "High-throughput Spring Boot APIs for MNP (mobile number portability) — **50k+** MAU and carrier-grade consistency.",
-    details:
-      "Focused on messaging orchestration, batch reconciliation, and regulatory alignment.",
+      "Created Hibernate entities for database mapping and wrote optimized SQL and HQL queries.",
     color: "#10B981",
     highlights: [
-      "Shipped **12+** high-throughput REST APIs for MNP services at scale (**50k+** monthly active users).",
-      "RabbitMQ orchestration refactors for **~99.9%** consistency during subscriber porting events.",
-      "Spring Batch jobs to cross-verify porting logs vs regulatory data — resolved mismatches on **~25%** of flagged records.",
+      "Developed front-end UI elements and handled AJAX calls using JSP, HTML, and JavaScript.",
+      "Integrated Google Maps API for real-time mobile device tracking within the web application.",
+      "Provided direct technical support to clients to resolve production issues and maintain stability.",
     ],
   },
 ] as const;

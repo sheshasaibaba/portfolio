@@ -65,7 +65,7 @@ export function LetsConnect() {
               className="mx-auto mt-5 max-w-xl text-pretty text-base leading-relaxed text-zinc-700 md:text-lg [text-shadow:none] group-hover:text-zinc-900 dark:text-muted-foreground dark:[text-shadow:0_1px_2px_oklch(0_0_0/40%)] dark:group-hover:text-zinc-200"
             >
               Building the future, one line at a time. Whether you&apos;re shipping a product,
-              scaling a team, or exploring something ambitious — I&apos;d love to hear from you.
+              scaling a team, or exploring something ambitious, I&apos;d love to hear from you.
             </motion.p>
 
             <motion.ul

@@ -10,12 +10,23 @@ export const experience: Experience[] = experienceSource.map((e) => ({
   period: e.period,
   tenureLabel: e.tenureLabel,
   summary: e.description,
-  details: e.details,
+  details: (() => {
+    const v = (e as { details?: unknown }).details;
+    return typeof v === "string" ? v : undefined;
+  })(),
   highlights: [...e.highlights],
   accentColor: e.color,
-  clientSubtitle: "clientSubtitle" in e ? e.clientSubtitle : undefined,
+  clientSubtitle: (() => {
+    const v = (e as any).clientSubtitle;
+    return typeof v === "string" ? v : undefined;
+  })(),
   stackBadges: "stackBadges" in e && e.stackBadges ? [...e.stackBadges] : undefined,
-  cardVariant: "cardVariant" in e ? e.cardVariant : undefined,
-  highlightsPreviewCount:
-    "highlightsPreviewCount" in e ? e.highlightsPreviewCount : undefined,
+  cardVariant: (() => {
+    const v = (e as any).cardVariant;
+    return v === "default" || v === "nlp" ? v : undefined;
+  })(),
+  highlightsPreviewCount: (() => {
+    const v = (e as any).highlightsPreviewCount;
+    return typeof v === "number" ? v : undefined;
+  })(),
 }));

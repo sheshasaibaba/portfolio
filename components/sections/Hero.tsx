@@ -2,23 +2,28 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useState } from "react";
 
 import { GlowTiltCard } from "@/components/cards/GlowTiltCard";
+import { ResumeDialog } from "@/components/layout/ResumeDialog";
 import { siteProfile } from "@/constants/data";
 import { cn } from "@/lib/utils";
 
 export function Hero() {
   const src = siteProfile.portraitSrc;
   const alt = siteProfile.portraitAlt ?? `${siteProfile.name} portrait`;
+  const [resumeOpen, setResumeOpen] = useState(false);
+  const resumeLink = siteProfile.links.find((l) => l.label.toLowerCase() === "resume");
 
   return (
     <motion.section
-      id="hero"
+      id="home"
       initial={{ opacity: 0, y: 28 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.35, ease: [0.25, 0.46, 0.45, 0.94] }}
       className="flex min-h-[78vh] flex-col justify-center px-4 py-20 sm:px-6 sm:py-24 md:min-h-[85vh] md:py-32"
     >
+      <ResumeDialog open={resumeOpen} onOpenChange={setResumeOpen} />
       <div className="mx-auto grid w-full max-w-5xl items-center gap-12 md:grid-cols-[1fr_minmax(260px,320px)] md:gap-16">
         <div className="order-2 md:order-1">
           <p className="text-glow-secondary text-sm font-medium tracking-wide uppercase [text-shadow:0_0_12px_var(--glow-secondary)]">
@@ -45,18 +50,31 @@ export function Hero() {
           </p>
           {siteProfile.links.length > 0 ? (
             <ul className="mt-10 flex flex-wrap gap-3">
-              {siteProfile.links.map((l) => (
-                <li key={l.href}>
-                  <a
-                    href={l.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
+              {siteProfile.links
+                .filter((l) => l.label.toLowerCase() !== "resume")
+                .map((l) => (
+                  <li key={l.href}>
+                    <a
+                      href={l.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="border-glow-muted/40 text-foreground hover:border-glow-primary/50 hover:text-glow-primary inline-flex rounded-lg border bg-background/50 px-4 py-2 text-sm font-medium backdrop-blur-sm transition-colors [box-shadow:0_0_0_1px_var(--glow-muted)] hover:[box-shadow:0_0_16px_var(--glow-muted)]"
+                    >
+                      {l.label}
+                    </a>
+                  </li>
+                ))}
+              {resumeLink ? (
+                <li>
+                  <button
+                    type="button"
+                    onClick={() => setResumeOpen(true)}
                     className="border-glow-muted/40 text-foreground hover:border-glow-primary/50 hover:text-glow-primary inline-flex rounded-lg border bg-background/50 px-4 py-2 text-sm font-medium backdrop-blur-sm transition-colors [box-shadow:0_0_0_1px_var(--glow-muted)] hover:[box-shadow:0_0_16px_var(--glow-muted)]"
                   >
-                    {l.label}
-                  </a>
+                    Resume
+                  </button>
                 </li>
-              ))}
+              ) : null}
             </ul>
           ) : null}
         </div>
